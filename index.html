@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>NMT</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Template by FreeHTML5.co" />
+	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+	<meta name="author" content="FreeHTML5.co" />
+
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Simple Line Icons -->
+	<link rel="stylesheet" href="css/simple-line-icons.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Style -->
+	<link rel="stylesheet" href="css/style.css">
+
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js" ></script>
+	<script>
+	function translate_ok(){
+		msg = document.getElementById('english').value;
+		target = document.getElementById('german').value;
+		Data={'text':msg};
+		$.ajax({
+           type: "POST",
+           url: "http://127.0.0.1:5000/api",
+           
+           data: JSON.stringify(Data)
+       }).done(function(data){document.getElementById('german').value = data.text});
+
+    }
+	//$( "#pagla" ).click(translate_ok('english','german'));
+	$(document).ready(function() {
+  		$('#pagla').click(translate_ok);
+	});
+	</script>
+
+	</head>
+	<body>
+	<header role="banner" id="fh5co-header">
+		<div class="fluid-container">
+			<nav class="navbar navbar-default navbar-fixed-top js-fullheight">
+				<div id="navbar" class="navbar-collapse js-fullheight">
+					<ul class="nav navbar-nav navbar-left">
+						<li class="active"><a href="#" data-nav-section="home"><span>Home</span></a></li>
+						<li><a href="#" data-nav-section="services"><span>Services</span></a></li>
+						<li><a href="#" data-nav-section="explore"><span>Project</span></a></li>
+						<li><a href="#" data-nav-section="pricing"><span>Pricing</span></a></li>
+						<li><a href="#" data-nav-section="team"><span>Team</span></a></li>
+					</ul>
+				</div>
+			</nav>
+	  </div>
+	</header>
+
+	<section id="fh5co-home" data-section="home" style="background-image: url(images/full_image_1.gif);" data-stellar-background-ratio="0.5">
+		<div class="gradient"></div>
+		<div class="container">
+			<div class="text-wrap">
+				<div class="text-inner">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 text-center">
+							<h1 class="to-animate">Neural Machine Translation</h1>
+							<h2 class="to-animate">English to BODO translation with state of the art neural network architectures.</a></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="fh5co-services" data-section="services">
+		<div class="fh5co-services">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 section-heading text-center">
+						<h2 class="to-animate">What is our Project?</h2>
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2 subtext">
+								<h3 class="to-animate">Neural machine translation (NMT) is an approach to machine translation that uses a large artificial neural network to predict the likelihood of a sequence of words, typically modeling entire sentences in a single integrated model. </h3>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="core-features">
+						<div class="grid2 to-animate" style="background-image: url(images/full_image_2.gif);">
+						</div>
+						<div class="grid2">
+							<div class="core-f">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="core">
+											
+										<div class="core">
+											<i class="icon-laptop to-animate-2"></i>
+											<div class="fh5co-post to-animate">
+												<h3>Hardware</h3>
+												<p>Intel(R) Xeon(R) CPU @ 2.20GHz, 13GB RAM, Tesla K80 on Google Cloud.</p>
+											</div>
+										</div>
+										<div class="core">
+											<i class="icon-gear to-animate-2"></i>
+											<div class="fh5co-post to-animate">
+												<h3>Tools</h3>
+												<p>Tensorflow 2.0, Python 3.6, Flask, Javascript, HTML, CSS, AJAX.</p>
+											</div>
+										</div>
+										<div class="core">
+											<i class="icon-columns to-animate-2"></i>
+											<div class="fh5co-post to-animate">
+												<h3>Dataset</h3>
+												<p>We have created a language dataset from various sources available online and offline</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="fh5co-counter-section" class="fh5co-counters">
+					<div class="container">
+						<div class="row to-animate">
+							<div class="col-md-3 text-center">
+								<span class="fh5co-counter js-counter" data-from="0" data-to="176692" data-speed="5000" data-refresh-interval="5"></span>
+								<span class="fh5co-counter-label">NUMBER OF TRANSLATIONS</span>
+							</div>
+							<div class="col-md-3 text-center">
+								<span class="fh5co-counter js-counter" data-from="0" data-to="3" data-speed="10000" data-refresh-interval="50"></span>
+								<span class="fh5co-counter-label">BLEU SCORE</span>
+							</div>
+							<div class="col-md-3 text-center">
+								<span class="fh5co-counter js-counter" data-from="0" data-to="7" data-speed="8000" data-refresh-interval="50"></span>
+								<span class="fh5co-counter-label">TRANING HOURS</span>
+							</div>
+							<div class="col-md-3 text-center">
+								<span class="fh5co-counter js-counter" data-from="0" data-to="800" data-speed="8000" data-refresh-interval="50"></span>
+								<span class="fh5co-counter-label">EPOCHS</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	          
+					<div class="new_cen">
+					
+					<input  type="text" name="english" id="english" placeholder="English" size="50"><br>			
+					<input  type="text" name="english" id="german" placeholder="BODO" size="50"><br>
+					
+					</div >
+
+					<div class="paglau">
+						<input id="pagla" class="btn btn-primary" type="button" value="Translate"  >	
+						
+					</div>
+					
+	
+
+	<section id="fh5co-team" data-section="team">
+		<div class="fh5co-team">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 section-heading text-center">
+						<h2 class="to-animate">Team Members</h2>
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2 subtext">
+								<h3 class="to-animate"> </h3>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="team-box text-center to-animate-2">
+							<div class="user"><img class="img-reponsive" src="images/user-1.jpeg" alt="Roger Garfield"></div>
+							<h3>Adarsh Shirame</h3>
+							<span class="position">DBATU CE 2016-2020</span>
+							<p></p>
+							
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="team-box text-center to-animate-2">
+							<div class="user"><img class="img-reponsive" src="images/user-2.jpeg" alt="Roger Garfield"></div>
+							<h3>Rushikesh Ghare</h3>
+							<span class="position">DBATU CE 2016-2020</span>
+							<p></p>
+							
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="team-box text-center to-animate-2">
+							<div class="user"><img class="img-reponsive" src="images/user-3.jpeg" alt="Roger Garfield"></div>
+							<h3>Sumit Abdagire</h3>
+							<span class="position">DBATU CE 2016-2020</span>
+							<p></p>
+							
+						</div>
+					</div>
+					
+				
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="getting-started getting-started-1">
+		<div class="getting-grid" style="background-image:  url(images/full_image_1.jpg);">
+			<div class="desc text-center">
+				<h2>DBATU</h2>
+				
+			</div>
+		</div>
+	</div>
+
+	
+	<!-- <div id="map" class="fh5co-map"></div> -->
+
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Counters -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- Main JS (Do not remove) -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
+
